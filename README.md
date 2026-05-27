@@ -111,6 +111,25 @@ PI_WEB_PROVIDERS_E2E_PROMPT='Use web_search exactly once for query "OpenAI Respo
 npm run e2e:pi
 ```
 
+## Publishing
+
+The package is published from GitHub Actions using npm trusted publishing/OIDC.
+
+Trusted publisher settings on npm should match:
+
+- provider: GitHub Actions
+- repository: `arpagon/pi-web-providers-az-cf`
+- workflow filename: `publish.yml`
+- environment: `npm`
+- allowed action: `npm publish`
+
+Create a version commit/tag and push the tag to publish:
+
+```sh
+npm version patch
+git push --follow-tags
+```
+
 ## Non-goals
 
 The following providers are intentionally out of scope unless explicitly re-approved:
