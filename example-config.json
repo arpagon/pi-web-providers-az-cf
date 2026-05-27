@@ -1,0 +1,33 @@
+{
+  "tools": {
+    "search": "openai",
+    "contents": "cloudflare",
+    "answer": "openai",
+    "research": "openai"
+  },
+  "providers": {
+    "cloudflare": {
+      "credentials": {
+        "api": "CLOUDFLARE_API_TOKEN"
+      },
+      "accountId": "CLOUDFLARE_ACCOUNT_ID"
+    },
+    "openai": {
+      "baseUrl": "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/openai/v1/",
+      "credentials": {
+        "api": "AZURE_OPENAI_API_KEY"
+      },
+      "options": {
+        "search": {
+          "model": "gpt-4.1"
+        },
+        "answer": {
+          "model": "gpt-4.1"
+        },
+        "research": {
+          "model": "o4-mini-deep-research"
+        }
+      }
+    }
+  }
+}
